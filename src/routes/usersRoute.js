@@ -1,6 +1,6 @@
 import { Router } from "express";
 import short from "short-uuid"; //short.generate();
-import users from "../data/users.json";
+import users from "../data/users.js";
 const router = Router();
 
 router.get("/", (res, req) => {
@@ -13,3 +13,5 @@ router.get("/users", (req, res) => {
   }
   res.json(users);
 });
+
+export default router;
